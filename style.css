@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: darkslateblue;
+    grid-template-areas: 
+        "header header header"
+        "main main main"
+        "main main main";
+    display: grid;
+    grid-template-columns: 1fr 80vh 1fr;
+    grid-template-rows: auto;
+    
+}
+header{
+    font-family: comic sans;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    padding-left: 1vh;
+    grid-area: header;
+    background-color: brown;
+}
+main{
+    grid-area: main;
+}
