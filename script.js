@@ -5,6 +5,7 @@ let paper = document.getElementById("paper")
 //paper is 2
 let sis = document.getElementById("sis")
 //sis is 3 
+let winscore = document.getElementById("wincounter")
 let playerdes = 0;
 let totalwin = 0;
 let totallose = 0;
@@ -27,6 +28,7 @@ function play(playerdes){
         win()
     }
     console.log(playerdes , botdes);
+    updatescores()
 } 
 function lose(){
     alert("lose");
@@ -39,6 +41,9 @@ function win(){
 function draw(){
     alert("draw");
     totaldraw = totaldraw + 1;
+}
+function updatescores(){
+    document.getElementById("wincounter").innerHTML = (totalwin);
 }
 rock.addEventListener("click", function(){play(1)})
 paper.addEventListener("click", function(){play(2)})
