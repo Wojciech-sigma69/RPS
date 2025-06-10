@@ -6,14 +6,14 @@ body{
     grid-template-areas: 
         "header header header"
         "main main main"
-        "main main main";
+        "aside aside aside";
     display: grid;
     grid-template-columns: 1fr 80vh 1fr;
     grid-template-rows: auto;
+    font-family: comic sans;
     
 }
 header{
-    font-family: comic sans;
     display: flex;
     justify-content: center;
     align-self: center;
@@ -25,4 +25,15 @@ header{
 }
 main{
     grid-area: main;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+}
+aside{
+    grid-area: aside;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: blue;
+    
 }

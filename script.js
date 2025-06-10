@@ -5,7 +5,10 @@ let paper = document.getElementById("paper")
 //paper is 2
 let sis = document.getElementById("sis")
 //sis is 3 
-let winscore = document.getElementById("wincounter")
+let winscore = document.getElementById("wincounter");
+let drawscore = document.getElementById("drawcounter");
+let losescore = document.getElementById("losecounter");
+let wlratio = document.getElementById("ratiocounter");
 let playerdes = 0;
 let totalwin = 0;
 let totallose = 0;
@@ -31,19 +34,20 @@ function play(playerdes){
     updatescores()
 } 
 function lose(){
-    alert("lose");
     totallose = totallose + 1;
 }
 function win(){
-    alert("win");
     totalwin = totalwin + 1;
 }
 function draw(){
-    alert("draw");
     totaldraw = totaldraw + 1;
 }
 function updatescores(){
-    document.getElementById("wincounter").innerHTML = (totalwin);
+    wincounter.innerHTML = (totalwin);
+    drawscore.innerHTML = (totaldraw);
+    losescore.innerHTML = (totallose);
+    winloseratio = Math.round((totalwin / totallose)* 100) / 100;
+    wlratio.innerHTML = (winloseratio + ":1"); 
 }
 rock.addEventListener("click", function(){play(1)})
 paper.addEventListener("click", function(){play(2)})
